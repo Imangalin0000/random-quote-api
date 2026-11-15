@@ -3,6 +3,7 @@ import random
 from flask import Flask, jsonify
 
 app = Flask(__name__)
+GREETING = os.environ.get("GREETING", "Welcome")
 
 QUOTES = [
     {"id": 1, "author": "Albert Einstein", "text": "Life is like riding a bicycle. To keep your balance, you must keep moving."},
@@ -14,7 +15,7 @@ QUOTES = [
 
 @app.route('/')
 def home():
-    return jsonify({"message": "Welcome to the Random Quote API"})
+    return jsonify({"message": f"{GREETING} to the Random Quote API"})
 
 @app.route('/healthz')
 def healthz():

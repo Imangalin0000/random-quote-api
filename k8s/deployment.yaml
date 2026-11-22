@@ -19,7 +19,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: app
-          image: ghcr.io/imangalin0000/random-quote-api:d0852bfb363c848874beaa3f879221f0f05c33f5
+          image: ghcr.io/imangalin0000/random-quote-api:c23b7ee2f754206fcca4c91fa6bf00ae79425baf
           ports:
             - name: http
               containerPort: 8080
